@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Srujana - Portfolio</title>
+
+    <link rel="icon" type="image/png" href="assets/f1carfavicon.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700;900&family=Roboto:wght@400;500&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#home" class="logo"><img src="assets/f1carfavicon.jpg" style="width: 50px;height: 50px;"/></a>
+        <ul>
+          <li><a href="#driver-profile">PROFILE</a></li>
+          <li><a href="#season-highlights">PROJECTS</a></li>
+          <li><a href="#tech-telemetry">TELEMETRY</a></li>
+          <li><a href="#paddock-access">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero-section">
+        <div class="hero-content">
+          <h1>SRUJANA SAWANT</h1>
+          <p>Aspiring Software Engineer & F1 Enthusiast</p>
+          <a href="#season-highlights" class="cta-button"
+            >VIEW SEASON HIGHLIGHTS</a
+          >
+        </div>
+      </section>
+
+      <section id="driver-profile" class="content-section">
+        <h2 class="section-title">PROFILE</h2>
+        <div class="profile-layout">
+          <div class="profile-image">
+            <img
+              src="assets/SrujanaSawant_Headshot.JPG"
+              alt="Srujana's Headshot"
+            />
+          </div>
+          <div class="profile-details">
+            <h3>Telemetry Data</h3>
+            <ul class="telemetry-list">
+              <li><strong>TEAM:</strong> Computer Science</li>
+              <li><strong>UNIVERSITY:</strong> Scaler School of Technology</li>
+              <li><strong>GRID POSITION:</strong> First-Year Undergraduate</li>
+              <li><strong>NATIONALITY:</strong> Indian</li>
+            </ul>
+            <p class="bio">
+              As a first-year student, I am building the
+              foundations to engineer robust and efficient software solutions.
+              My goal is to continuously learn, adapt, and push the boundaries
+              of technology, especially in motorsports.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="tech-telemetry" class="content-section">
+        <h2 class="section-title">TECHNICAL TELEMETRY</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>LANGUAGES</h3>
+            <ul>
+              <li><i class="fab fa-python"></i> Python</li>
+              <li><i class="fab fa-code"></i> C</li>
+              <li><i class="fab fa-code"></i> C++</li>
+              <li><i class="fab fa-java"></i> Java</li>
+              <li><i class="fab fa-js"></i> JavaScript</li>
+              <li><i class="fab fa-html5"></i> HTML5</li>
+              <li><i class="fab fa-css3"></i> CSS3</li>
+              <li><i class="fab fa-sql"></i></li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>FRAMEWORKS & LIBRARIES</h3>
+            <ul>
+              <li><i class="fab fa-flask"></i> Flask</li>
+              <li><i class="fab fa-react"></i> React</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>TOOLS & PLATFORMS</h3>
+            <ul>
+              <li><i class="fab fa-git-alt"></i> Git & GitHub</li>
+              <li><i class="fab fa-docker"></i> Docker</li>
+              <li><i class="fas fa-database"></i> SQLite</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="season-highlights" class="content-section">
+        <h2 class="section-title">2025 SEASON HIGHLIGHTS</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <img
+              src="assets/LBS.png"
+              alt="Last Boat Standing Game"
+            />
+            <div class="card-content">
+              <h3>Last Boat Standing</h3>
+              <p>
+                Last Boat Standing is a 2D top-down survival game where you
+                control a boy on a boat. Rescue floating people before the
+                1-minute timer runs out, avoid hazards like rocks, snakes, and
+                whirlpools, and reach the rescue station. Boat holds max 3
+                people per trip.
+              </p>
+              <div class="tech-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://srujanasawant.itch.io/daydream-game"
+                  class="project-button"
+                  target="_blank"
+                  >LIVE DEMO</a
+                >
+                <a
+                  href="https://github.com/srujanasawant/Last-Boat-Standing"
+                  class="project-button"
+                  target="_blank"
+                  >VIEW ON GITHUB</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <img
+              src="assets/ai-story-generator.png"
+              alt="AI Story Generator Main Page"
+            />
+            <div class="card-content">
+              <h3>AI Story Generator</h3>
+              <p>
+                This AI Story Generator using the Gemini API is a tool that
+                takes user prompts and generates creative, coherent stories by
+                leveraging Google’s Gemini large language model for natural
+                language understanding and text generation.
+              </p>
+              <div class="tech-tags">
+                <span>Python</span><span>Flask</span><span>HTML</span
+                ><span>CSS</span><span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <!--<a href="#" class="project-button">LIVE DEMO</a>-->
+                <a
+                  href="https://github.com/srujanasawant/ai-story-generator"
+                  class="project-button"
+                  >VIEW ON GITHUB</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <img
+              src="assets/CS50Exercises.PNG"
+              alt="Screenshot of list of cs50 Exercises"
+            />
+            <div class="card-content">
+              <h3>CS50 Exercises</h3>
+              <p>
+                CS50 exercises are hands-on programming and problem-solving
+                assignments that cover core computer science topics like
+                algorithms, data structures, memory, and web development.
+              </p>
+              <div class="tech-tags">
+                <span>C</span><span>HTML</span><span>CSS</span
+                ><span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <!--<a href="https://cs50.me/cs50x" class="project-button" target="_blank">GRADEBOOK</a>-->
+                <a
+                  href="https://submit.cs50.io/users/srujanasawant"
+                  class="project-button"
+                  target="_blank"
+                  >VIEW ON GITHUB</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="paddock-access" class="content-section">
+        <h2 class="section-title">GET IN THE PADDOCK</h2>
+        <p class="contact-subtitle">
+          Have a project or opportunity? Let's connect.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:sawant.srujana@gmail.com"
+            ><i class="fas fa-envelope"></i> sawant.srujana@gmail.com</a
+          >
+          <a href="https://www.linkedin.com/in/srujana-sawant/" target="_blank"
+            ><i class="fab fa-linkedin"></i> LinkedIn</a
+          >
+          <a href="https://github.com/srujanasawant" target="_blank"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Srujana Sawant</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

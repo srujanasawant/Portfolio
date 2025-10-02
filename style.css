@@ -1,0 +1,332 @@
+/* --- GLOBAL STYLES & VARIABLES --- */
+:root {
+    --primary-bg: #15151E;
+    --accent-red: #E10600;
+    --text-light: #FFFFFF;
+    --text-dark: #15151E;
+    --border-grey: #38383F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* --- TYPOGRAPHY --- */
+h1, h2, h3, .logo, .cta-button, .project-button {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h1 { font-size: 4rem; letter-spacing: 2px; }
+h2 { font-size: 2.5rem; letter-spacing: 1px; }
+h3 { font-size: 1.5rem; color: var(--accent-red); }
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* Red underline effect for titles */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-red);
+}
+
+/* --- HEADER & NAVIGATION --- */
+header {
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    top: 0;
+    left: 0;
+    padding: 1rem 5%;
+    background-color: rgba(21, 21, 30, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-grey);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 900;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-red);
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(21, 21, 30, 0.7), rgba(21, 21, 30, 0.7)), url('https://images.unsplash.com/photo-1541892019881-7557a14205f4?q=80&w=2070') no-repeat center center/cover;
+}
+
+.hero-content p {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.2rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.cta-button {
+    background-color: var(--accent-red);
+    color: var(--text-light);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff1f1f;
+    transform: translateY(-3px);
+}
+
+/* --- GENERAL CONTENT SECTION --- */
+.content-section {
+    padding: 100px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    opacity: 0; /* For scroll animation */
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- DRIVER PROFILE --- */
+.profile-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    border: 5px solid var(--border-grey);
+}
+
+.telemetry-list {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.telemetry-list li {
+    font-family: 'Roboto Mono', monospace;
+    margin-bottom: 0.5rem;
+}
+
+.bio {
+    font-size: 1.1rem;
+}
+
+/* --- TECH TELEMETRY --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.skill-category ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.skill-category li {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-category i {
+    color: var(--accent-red);
+    width: 20px;
+}
+
+/* --- SEASON HIGHLIGHTS (PROJECTS) --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #20202a;
+    border: 1px solid var(--border-grey);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content p {
+    flex-grow: 1;       /* push the buttons to the bottom */
+}
+
+.tech-tags {
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;      /* to allow wrapping */
+    gap: 8px;  
+}
+
+.tech-tags span {
+    background-color: var(--border-grey);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+    font-family: 'Roboto Mono', monospace;
+    white-space: nowrap;
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.project-button {
+    background: none;
+    border: 1px solid var(--accent-red);
+    color: var(--accent-red);
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-button:hover {
+    background-color: var(--accent-red);
+    color: var(--text-light);
+}
+
+/* --- PADDOCK ACCESS (CONTACT) --- */
+#paddock-access {
+    text-align: center;
+}
+
+.contact-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+    color: var(--accent-red);
+}
+
+.contact-links i {
+    margin-right: 8px;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--border-grey);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    
+    nav ul { display: none; }
+    .profile-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .profile-image {
+        margin: 0 auto;
+    }
+}
